@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@drawable/main">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <androidx.appcompat.widget.AppCompatSpinner
+            android:id="@+id/sp_city"
+            android:layout_width="120dp"
+            android:layout_height="50dp"
+            android:entries="@array/cities"
+            android:spinnerMode="dropdown"
+            android:popupBackground="@color/trans"
+            android:overlapAnchor="false"
+            android:background="@color/trans"
+            />
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_gravity="right">
+
+
+            <EditText
+                android:id="@+id/text"
+                android:layout_width="120dp"
+                android:hint="city"
+                android:inputType = "text"
+                android:layout_height="50dp"/>
+            <Button
+                android:id="@+id/search"
+                android:layout_width="80dp"
+                android:layout_height="50dp"
+
+                android:background="@color/trans"
+                android:text="搜索" />
+
+            <Button
+                android:id="@+id/add"
+                android:layout_width="80dp"
+                android:layout_height="50dp"
+                android:background="@color/trans"
+                android:text="添加" />
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            >
+
+
+            <Button
+                android:id="@+id/sub"
+                android:layout_width="80dp"
+                android:layout_height="50dp"
+                android:background="@color/trans"
+                android:text="删除" />
+
+            <Button
+                android:id="@+id/refresh"
+                android:layout_width="80dp"
+                android:layout_height="50dp"
+                android:background="@color/trans"
+                android:text="刷新" />
+        </LinearLayout>
+
+
+
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/current"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:text="北京"
+        android:textColor="@color/white"
+        android:layout_marginTop="10dp"
+        />
+
+    <ImageView
+        android:id="@+id/iv_weather"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:src="@drawable/biz_plugin_weather_qing"
+        />
+
+    <TextView
+        android:id="@+id/tv_tem_low_high"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:text="25℃-33℃"
+        android:textColor="@color/white"
+        android:layout_marginTop="10dp"
+        />
+
+    <TextView
+        android:id="@+id/tv_weather"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:text="阴转多云"
+        android:textColor="@color/white"
+        android:layout_marginTop="10dp"
+        />
+
+
+    <TextView
+        android:id="@+id/tv_win"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:text="南风3-4级"
+        android:textColor="@color/white"
+        android:layout_marginTop="10dp"
+        />
+    <TextView
+        android:id="@+id/tv_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:text="（2023-07-03）"
+        android:textColor="@color/white"
+        android:layout_marginTop="10dp"
+        />
+
+    <TextView
+        android:id="@+id/tv_update"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="15sp"
+        android:text="数据更新时间-2023-07-04 09:44:45"
+        android:textColor="@color/white"
+        android:layout_marginTop="2dp"
+        />
+
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rlv_future_weather"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+
+</LinearLayout>
